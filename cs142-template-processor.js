@@ -1,7 +1,8 @@
 Cs142TemplateProcessor = function(template){
     this.fillIn = function(dictionary){
-        return template.replace(/{{([^}}]+)?}}/g, function(match, p1, offset, string){
-            console.log('match',match);
+      	//return template.replace(/{{([^}}]+)?}}/g, function(match, p1, offset, string){
+          return template.replace(/{{(.*?)}}/g, function(match, p1, offset, string){
+	    console.log('match',match);
             console.log('p1',p1);
             console.log('offset',offset);
             console.log('string',string);    
